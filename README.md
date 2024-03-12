@@ -4,4 +4,4 @@ Analiza czynników wpływających na występowanie chorób
 
 
 Pomysły do projektu:
- - przykłady
+ - wytypowanie wartości odstających (+ usunięcie)
