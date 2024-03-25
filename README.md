@@ -1,7 +1,7 @@
 # eksploracja_danych
 Projekt Eksploracja danych
 Analiza czynników wpływających na występowanie chorób
-
+[LINK do prezentacji](https://docs.google.com/presentation/d/1BlMR92iOrUKCp6oUK4kQ-doLP8Iqf9oxL-mjgW8FeIk/edit?usp=sharing)
 
 Pomysły do projektu:
  - wytypowanie wartości odstających (+ usunięcie)
