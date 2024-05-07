@@ -15,3 +15,5 @@ Zbiory chyba są wstępnie przetworzone więc tu nie trzeba za do robić, w EDA 
 5. Próba znalezienia powiązań pomiędzy zbiorami, pewnych wzorów, skupienie się np na warunkach spoza zbioru takimi jak rok, kwota przzeznaczona na fundusz medyczny kraju, susze itd
 6. modele predykcyjne? Można jakieś podstawowe zrobić dla każdego zbioru i to jakoś zwizualizować - ale nie skupiać się jakoś na tym chyba
 7. Raport i prezentacja
+
+Modele predykcyjne + czasy predykcji i trenowania, ocena (precision, accuracy, recall i może macierz pomyłek)
