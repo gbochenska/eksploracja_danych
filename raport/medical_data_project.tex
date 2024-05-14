@@ -146,6 +146,7 @@ Analiza czynników wpływających na występowanie chorób}
 % ----------Spis treści------------
 \tableofcontents
 \thispagestyle{empty}
+\newpage
 
 % ----------Raport------------
 \section{Wprowadzenie}
@@ -161,6 +162,7 @@ Nadciśnienie tętnicze, często nazywane "cichym zabójcą", polega na nieprawi
 
 Udar mózgu występuje, gdy przepływ krwi do części mózgu zostaje nagle przerwany, co może być spowodowane zatorem (udar niedokrwienny) lub pęknięciem naczynia krwionośnego (udar krwotoczny). Objawy mogą obejmować nagłe osłabienie, trudności w mówieniu, zrozumieniu mowy, widzeniu, utratę równowagi lub nagłe, silne bóle głowy. Czynniki ryzyka udaru są podobne do tych dla nadciśnienia i cukrzycy, obejmujące niezdrową dietę i brak aktywności fizycznej.
 
+\newpage
 
 \section{Cel projektu}
 
@@ -172,20 +174,22 @@ Założenia projektu obejmują wnikliwą analizę danych, polegającą na przetw
 \section{Zbiór Danych}
 
 \subsection{Opis zbiorów}
-Zbiór danych wykorzystany w projekcie pochodzi z witryny Kaggle (Diabetes, Hypertension and Stroke Prediction) i jest wynikiem połączenia trzech różnych zestawów danych dotyczących zdrowia, zawierających odpowiednio wskaźniki cukrzycy, niewydolności serca oraz udaru. Każdy zbiór został wcześniej poddany obróbce w celu wyrównania liczebności klas. 
+Zbiór danych wykorzystany w projekcie pochodzi z witryny Kaggle (Diabetes, Hypertension and Stroke Prediction) i jest wynikiem połączenia trzech różnych zestawów danych dotyczących zdrowia, zawierających odpowiednio wskaźniki cukrzycy, niewydolności serca oraz udaru. Każdy zbiór został wcześniej poddany obróbce w celu wyrównania liczebności klas. W zbiorze znalazły się w nim:
 
-Pierwszy zestaw danych również pochodzi z Kaggle (Diabetes Health Indicators Dataset). Zawiera 18 cech zdrowotnych związanych z cukrzycą. Do najważniejszych możemy zaliczyć fizyczne cechy takie jak poziom glukozy we krwi, BMI, wiek oraz cechy związane z trybem życia, takie jak ilość spożywanych warzyw i owoców w ciągu dnia, ilość wypijanego alkoholu czy liczba dni kiedy osoba stwierdza u siebie złe samopoczucie. 
-
-Drugi zestaw danych, używany w analizie niewydolności serca, pochodzi z witryny smellydatascience.com. Obejmuje on 14 cech,  głównie są to cechy fizyczne pacjenta np. wiek i płeć. Inne zmienne jak ciśnienie krwi, cholesterol oraz wyniki badania EKG są ściśle związane z przeprowadzeniem konkretnych badań. Otrzymane dane ściśle nie opisują trybu życia pacjenta, jednak dają infromację o jego skutkach. 
-
-Trzeci i ostatni zestaw danych, dostępny także na Kaggle (Stroke Prediction Dataset). Zawiera on podobne wskaźniki zdrowotne jak w pierszym zbiorze, skupiając się na trybie życia pacjenta, takie jak stan cywilny, rodzaj miejsca zamieszkania ale też czy wystąpiły inne choroby u pacjenta związane z układem krążenia. 
+\begin{enumerate}
+  \item Pierwszy zestaw danych również pochodzi z Kaggle (Diabetes Health Indicators Dataset). Zawiera 18 cech zdrowotnych związanych z cukrzycą. Do najważniejszych możemy zaliczyć fizyczne cechy takie jak poziom glukozy we krwi, BMI, wiek oraz cechy związane z trybem życia, takie jak ilość spożywanych warzyw i owoców w ciągu dnia, ilość wypijanego alkoholu czy liczba dni kiedy osoba stwierdza u siebie złe samopoczucie. 
+  
+  \item Drugi zestaw danych, używany w analizie niewydolności serca, pochodzi z witryny smellydatascience.com. Obejmuje on 14 cech,  głównie są to cechy fizyczne pacjenta np. wiek i płeć. Inne zmienne jak ciśnienie krwi, cholesterol oraz wyniki badania EKG są ściśle związane z przeprowadzeniem konkretnych badań. Otrzymane dane ściśle nie opisują trybu życia pacjenta, jednak dają infromację o jego skutkach.
+  
+  \item Trzeci i ostatni zestaw danych, dostępny także na Kaggle (Stroke Prediction Dataset). Zawiera on podobne wskaźniki zdrowotne jak w pierszym zbiorze, skupiając się na trybie życia pacjenta, takie jak stan cywilny, rodzaj miejsca zamieszkania ale też czy wystąpiły inne choroby u pacjenta związane z układem krążenia. 
+\end{enumerate}
 
 \subsection{Oczyszczenie danych}
 uzupelnienie brakow, usunięcie wartosci odstajacych, normalizacja/standaryzacja
 
 eee, no kurde lipa - wyrownanie klas w zbiorach chyba zle zrobione, proba zrobienia samemu?
 
-np. po usunieciu wartosci odstajacych dla cukrzycy polowa zbioru usuwana xD
+np. po usunieciu wartosci odstajacych dla cukrzycy polowa zbioru jest usuwana xD
 
 \subsection{EDA}
 wykresy wykresy wykresy
