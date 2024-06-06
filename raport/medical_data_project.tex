@@ -185,16 +185,119 @@ Zbiór danych wykorzystany w projekcie pochodzi z witryny Kaggle (Diabetes, Hype
 \end{enumerate}
 
 \subsection{Oczyszczenie danych}
-uzupelnienie brakow, usunięcie wartosci odstajacych, normalizacja/standaryzacja
-
-
+W procesie oczyszczania danych zastosowano kilka zaawansowanych technik mających na celu poprawę jakości i spójności zbiorów danych. Pierwszym krokiem była imputacja, czyli metoda uzupełniania brakujących wartości, gdzie w miejsce pustych lub niekompletnych danych wprowadza się wartości statystyczne, takie jak mediana lub średnia. Pozwala to na zachowanie struktury danych bez znaczących zakłóceń w rozkładzie. Następnie dokonano usunięcia wartości odstających  przy użyciu metody Z-score, która identyfikuje i eliminuje rekordy, gdzie wartości wykraczają poza określone progi odchylenia standardowego. Ostatni etap to standaryzacja, gdzie dane przekształcano tak, aby miały średnią zero i odchylenie standardowe równe jeden. Ten krok jest kluczowy w przygotowaniu danych do analiz statystycznych i modelowania predykcyjnego, ponieważ niweluje różnice w skali między zmiennymi i pozwala na równoważne ich traktowanie. Każda z tych technik znacząco przyczyniła się do podniesienia jakości danych, co było istotne w jakości etapu modelowania predykcyjnego.
 
 \subsection{EDA}
-wykresy wykresy wykresy
 
-wytypowac profil pacjenta narazonego na chorobe najbardziej
-jakie cechy skorelowane? Czy wyszlo cos nieoczekiwanego?
+Eksploracyjna analiza danych, to proces analizowania i badania zbiorów danych w celu podsumowania ich głównych cech, często za pomocą metod wizualizacji. W projekcie przeprowadzona EDA pozwala na zrozumienie rozkładów poszczególnych danych medycznych i odkrycie potencjalnych zależności między nimi, co było niezbędne do podjęcia decyzji dotyczących dalszego modelowania danych.
 
+Na początek stworzono wykresy pudełkowe (ang. Boxplot) - stanowią podstawowy rodzaj wizualizacji danych numerycznych, które skutecznie prezentują rozkład danych, kwartyle oraz medianę, a także wartości odstające. Zamieszczono je na Rys. 1,2,3 odpodniednio dla danych o cukrzycy, udarze i nadćiśnieniu. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{raport/graphs/diabetes_boxplots.png}
+    \caption{Enter Caption}
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{raport/graphs/stroke_boxplots.png}
+    \caption{Enter Caption}
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{raport/graphs/hypertension_boxplot.png}
+    \caption{Enter Caption}
+    \label{fig:enter-label}
+\end{figure}
+
+Rozkład BMI dla osób z cukrzycą wskazuje na wyższe wartości w porównaniu do osób bez cukrzycy, co sugeruje związek między wyższym BMI a zwiększonym ryzykiem cukrzycy. Ponadto osoby z cukrzycą częściej oceniają swój ogólny stan zdrowia (GenHlth), jak i zdrowie.
+
+Natomiast osoby z nadciśnieniem mają niższe maksymalne tętno (thalach) w porównaniu z osobami bez nadciśnienia, co może odzwierciedlać wpływ choroby na kondycję serca.Zauważalne są wyższe wartości depresji ST (oldpeak) w EKG u osób z nadciśnieniem, co może wskazywać na związane z nim problemy sercowe.
+
+Istotnie wyższe poziomy glukozy we krwi (avg glucose level) są obserwowane u osób, które doświadczyły udaru, co sugeruje silny związek między tym parametrem, a ryzykiem udaru. Podobnie osoby, które doświadczyły udaru, częściej znajdują się w kategoriach pracy bardziej stresujących lub mniej aktywnych fizycznie, co może przyczyniać się do zwiększonego ryzyka wystąpienia choroby.
+
+W kolejny etapie przedstawiono macierze korelacji - narzędzie statystyczne używane do ilościowego określenia i wizualizacji siły i kierunku związku między zmiennymi w zbiorze danych. Każdy element macierzy przedstawia współczynnik korelacji między parami zmiennych, gdzie wartości bliskie +1 lub -1 wskazują na silną korelację dodatnią lub ujemną, a wartości bliskie zeru oznaczają brak zauważalnego związku.
+
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{raport/graphs/diabetes_corr.png}
+    \caption{Enter Caption}
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{raport/graphs/hypertension_corr.png}
+    \caption{Enter Caption}
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{raport/graphs/stroke_corr.png}
+    \caption{Enter Caption}
+    \label{fig:enter-label}
+\end{figure}
+
+
+histogramy czestosciowe (countplot) dla cech binarny z wyodrebnieniem istnienia danej choroby. konkretnie wskazuja czy dana cecha moze miec wplyw na chorobę.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{raport/graphs/hypertension_binary.png}
+    \caption{Enter Caption}
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{raport/graphs/diabetes_binary.png}
+    \caption{Enter Caption}
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{raport/graphs/stroke_binary.png}
+    \caption{Enter Caption}
+    \label{fig:enter-label}
+\end{figure}
+
+\newpage
+Czy wyszlo cos nieoczekiwanego?
+
+PROFIL PACJENTA CUKRZYCA
+- wysoki cholesterol
+- palenie Have you smoked at least 100 cigarettes in your entire life? [Note: 5 packs = 100 cigarettes]
+- choroby serca (coronary heart disease (CHD) or myocardial infarction (MI))
+- brak aktywnosci physical activity in past 30 days
+- dieta (malo warzywa i owoce)
+- trudnosci w poruszaniu sie + udar
+- nadcisnienie duuzy wplyw
+- gorsze zdrowie mentalne i fizyczne + wyzsze bmi
+- alkohol nie ma duzego znaczenia
+
+PROFIL PACJENTA UDAR
+- 
+- 
+- 
+- 
+
+
+PROFIL PACJENTA NADCISNIENIE
+-
+-
+- 
+- 
+
+
+\newpage
 
 \section{PCA}
 \section{Predykcja wystąpienia choroby}
